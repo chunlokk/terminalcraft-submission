@@ -156,11 +156,11 @@ pub fn update(model: &mut Model, msg: Msg) {
                                     model.game_state.current_score += 1;
                                     model.game_state.feedback_message = Some(format!("Good. The answer was {}", problem.answer));
                                 } else {
-                                    model.game_state.feedback_message = Some(format!("Incorrect. The answer was {}.", problem.answer));
+                                    model.game_state.feedback_message = Some(format!("Too far off. The answer was {}.", problem.answer));
                                 }
                             }
                             else {
-                                model.game_state.feedback_message = Some(format!("Too far off. The answer was {}.", problem.answer));
+                                model.game_state.feedback_message = Some(format!("Incorrect. The answer was {}.", problem.answer));
                             }
                             
                             // Record detailed stats
